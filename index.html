@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tagator Plugin</title>
+	<script src="//cdn.bootcss.com/jquery/2.2.3/jquery.js"></script>
+	<script src="http://xs01.meituan.net/kui/1.0.40/js/@waimai/kangarooui.js"></script>
+	<link rel="stylesheet" href="http://xs01.meituan.net/kui/1.0.40/css/@waimai/kangarooui.min.css">
+	<link rel="stylesheet" href="keyval_couple.css"/>
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		#wrapper {
+			padding: 15px;
+		}
+		#input_tagator1 {
+			width: 300px;
+		}
+		#input_tagator2 {
+			width: 300px;
+		}
+	</style>
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="keyval_couple.js"></script>
+	<script>
+		$(function () {
+			var $input_tagator1 = $('#input_tagator1');
+			$input_tagator1.keyValCouple({
+				useDimmer: true
+			});
+			$input_tagator1.change(function(){
+				console.log(this.value);
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<input id="input_tagator1" name="input_tagator1" class="form-control" value="key1,value1|key2,value1">
+		<input id="input_tagator2" name="input_tagator1" class="form-control" data-toggle="keyvalcouple" value="key1,value1|key2,value1">
+	</div>
+</body>
+</html>
